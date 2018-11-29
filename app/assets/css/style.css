@@ -13,10 +13,10 @@
   text-rendering: optimizeLegibility; }
 
 html {
-  font-size: 62.5%;
-  background: radial-gradient(ellipse at center, #F7F6F0 0, #c2ba8c 80%, #b0a66b 100%); }
+  font-size: 62.5%; }
 
 body {
+  background: url(../img/background.png);
   font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
   color: #444;
   transition: all .4s .3s ease-in; }
@@ -380,14 +380,107 @@ td,
 th {
   padding: 0; }
 
-.logo {
-  margin: -58px 0 0 -100px;
-  position: absolute;
-  top: 50%;
-  left: 50%; }
+.header {
+  width: 979px;
+  margin: 0 auto; }
 
-.nav ul {
-  list-style: none; }
+.header__section {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-bottom: 37px; }
+
+.headerLogo {
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 40px; }
+
+.headerButtons {
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 34.5px; }
+
+.borderback {
+  width: 100%;
+  padding-bottom: 0;
+  background: #ae3b44;
+  border-top: 7px solid black; }
+
+.pikcha {
+  height: 128px; }
+
+.content_text {
+  width: 1240px;
+  font-size: 20pt;
+  color: white; }
+  .content_text p {
+    line-height: 30px;
+    margin: 14px 0 0px 30px; }
+
+.content_text_second {
+  font-size: 10pt;
+  color: black;
+  padding-right: 142px;
+  width: 170%; }
+  .content_text_second p {
+    margin: 18px -120px 0 0;
+    font-size: 12px;
+    word-spacing: -2px; }
+
+.nav {
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px; }
+  .nav ul {
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-top: 15px; }
+    .nav ul li {
+      margin-right: 25px; }
+      .nav ul li a {
+        color: black;
+        text-decoration: none; }
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%; }
+
+nav ul li:hover > ul {
+  display: block;
+  position: absolute;
+  top: 74px;
+  right: 459px;
+  margin: 0;
+  padding: 0;
+  background: #212121; }
+  nav ul li:hover > ul li {
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 80px;
+    padding-top: 6px;
+    padding-bottom: 0; }
+    nav ul li:hover > ul li a {
+      color: #ffffff; }
+  nav ul li:hover > ul li:nth-child(3) {
+    padding-bottom: 4px; }
+
+nav ul ul li {
+  border-bottom: 2px solid #232525;
+  float: none;
+  position: relative; }
+
+nav ul ul li:hover > ul {
+  top: 0;
+  margin-right: -617px;
+  z-index: 2;
+  background-color: #212121; }
+  nav ul ul li:hover > ul li:nth-child(3) {
+    padding-bottom: 0; }
 
 @font-face {
   font-family: 'Font-Name';
