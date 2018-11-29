@@ -458,6 +458,8 @@ nav ul li:hover > ul {
   margin: 0;
   padding: 0;
   background: #212121; }
+  nav ul li:hover > ul ul {
+    display: none; }
   nav ul li:hover > ul li {
     margin: 0;
     padding-left: 10px;
@@ -474,11 +476,16 @@ nav ul ul li {
   float: none;
   position: relative; }
 
+nav ul ul li ul > li {
+  padding-right: 0; }
+
 nav ul ul li:hover > ul {
+  display: block;
+  box-sizing: border-box;
   top: 0;
-  margin-right: -617px;
-  z-index: 2;
-  background-color: #212121; }
+  margin-right: -615px; }
+  nav ul ul li:hover > ul li {
+    padding-right: 30px; }
   nav ul ul li:hover > ul li:nth-child(3) {
     padding-bottom: 0; }
 
