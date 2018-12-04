@@ -7,7 +7,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding-bottom: 37px;
+  padding-bottom: 39px;
 }
 .headerLogo {
     display: flex;
@@ -17,7 +17,7 @@
 }
 .headerButtons{
   display: flex;
-  padding-top: 34.5px; 
+  padding-top: 37px; 
 }
 .borderback {
     width: 100%;
@@ -37,18 +37,21 @@
   color: white;
   p{
     line-height: 30px;
-    margin: 14px 0 0px 30px;
+    font-size: 24px;
+    letter-spacing: -0.3px;
+    margin: 17px 0 0px 30px;
+    margin-left: 32px;
   }
 }
   .content_text_second{
     font-size: 10pt;
     color: black;
-    padding-right: 142px;
+    padding-right: 136px;
     width: 170%;
     p{
-      margin: 18px -120px 0 0;
+      margin: 20px -120px 0 0;
       font-size: 12px;
-      word-spacing: -2px;
+      word-spacing: 0;
     }
   }
 
