@@ -1,58 +1,149 @@
 .header {
-  width: 979px;
+
+  margin-bottom: 40px;
   margin: 0 auto;
-  
-}
-.header__section{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding-bottom: 39px;
-}
-.headerLogo {
-    display: flex;
-    padding-top: 40px;
-  img {
-  }
-}
-.headerButtons{
-  display: flex;
-  padding-top: 37px; 
-}
-.borderback {
-    width: 100%;
-    padding-bottom: 0;
-    background: #ae3b44;
-    border-top: 7px solid black;
-}
-.pikcha {
-  height: 128px;
-  img{
-    
-  }
-}
-.content_text{
-  width: 1240px;
-  font-size: 20pt;
-  color: white;
-  p{
-    line-height: 30px;
-    font-size: 24px;
-    letter-spacing: -0.3px;
-    margin: 17px 0 0px 30px;
-    margin-left: 32px;
-  }
-}
-  .content_text_second{
-    font-size: 10pt;
-    color: black;
-    padding-right: 136px;
-    width: 170%;
-    p{
-      margin: 20px -120px 0 0;
-      font-size: 12px;
-      word-spacing: 0;
-    }
-  }
+  max-width: 979px;
+  min-width: 790px;
+ 
+
+  .header__nav {
+
+      height: 123px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
 
+      nav {
+          
+          .nav--first {
+                list-style: none;
+              display: flex;
+              justify-content: space-around;
+              margin-right: 20px;
+
+             & > li {
+                 padding: 5px 0;
+             }
+
+              li {
+
+                  position: relative;
+                  
+                  a {
+                      font-size: 13px;
+                      font-weight: 400;
+                      color: $header-link-color;
+                      margin: 0 14px;
+                      text-decoration: none;
+                      letter-spacing: -0.51px;
+
+                      &:hover {
+                          color: $header-link-hover-color;
+                      }
+                  }
+
+                  &:hover > .nav--second {
+                      display: flex;
+                  }
+
+                  .header__link--active {
+                      color: $header-link-hover-color;
+                  }
+
+                  .nav--second {
+
+                      display: none;
+                      position: absolute;
+                      top: 21px;
+                      right: -57px;
+                      flex-direction: column;
+                      justify-content: flex-start;
+                      align-items: flex-start;
+                      z-index: 2;
+
+                      &::before {
+                          content: "";
+                          display: block;
+                          position: absolute;
+                          width: 10px;
+                          height: 3px;
+                          background-image: url(../img/arrow_up_header.png);
+                          top: -3px;
+                          left: 84px;
+                      }
+
+                      &::after {
+                          content: "";
+                          display: block;
+                          position: absolute;
+                          width: 3px;
+                          height: 10px;
+                          background-image: url(../img/arrow_right_header.png);
+                          top: 10px;
+                          right: 11px;
+                      }
+
+                      li {
+
+                          display: block;
+                          position: relative;
+
+                          &:hover > .nav--third {
+                              display: flex;
+                          }
+
+                          a {
+
+                              color: $header-link-second-color;
+                              background-color: $header-link-second-background;
+                              font-size: 12px;
+                              padding: 9px 0;
+                              width: 145px;
+
+                              display: block;
+                              border-bottom: 1px solid $mineShaft;
+                              padding-left: 12px;
+                              box-sizing: border-box;
+
+                              &:last-child {
+                                  border-bottom: none;
+                              }
+
+                              &:hover {
+                                  color: $header-link-hover-second-color;
+                              }
+                          }
+
+                          .header__link--second--active {
+                              color: $header-link-hover-second-color;
+                          }
+
+                          .nav--third {
+
+                              display: none;
+                              position: absolute;
+                              left: 120px;
+                              top: 0;
+                              flex-direction: column;
+                              justify-content: flex-start;
+                              align-items: flex-start;
+                              z-index: 2;
+                              
+                              li {
+
+                                  a {
+
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+ 
+}
